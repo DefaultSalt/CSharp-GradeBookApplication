@@ -5,7 +5,7 @@
     {
         public StandardGradeBook(string name):base(name)
         {
-            GradeBookType Type = GradeBookType.Standard;
+            Type = GradeBookType.Standard;
         }
     }
 }
