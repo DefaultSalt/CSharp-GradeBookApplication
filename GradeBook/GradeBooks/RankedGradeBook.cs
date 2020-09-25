@@ -12,6 +12,8 @@
 
         public char GetLetterGrade (double averageGrade)
         {
+            if (Students.Count < 5)
+
             float studentScore = (score / 100) * 100;
             if (studentScore >= 80)
             {
