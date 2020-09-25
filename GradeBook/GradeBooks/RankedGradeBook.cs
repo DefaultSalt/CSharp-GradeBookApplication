@@ -3,8 +3,8 @@
     using Enums;
     public class RankedGradeBook : BaseGradeBook
     {
-
-        int studentScore = ((score / 100) * 100);
+        public float score = 10;
+        
         public RankedGradeBook(string name):base(name)
         {
             Type = GradeBookType.Ranked;
@@ -12,6 +12,7 @@
 
         public char GetLetterGrade (double averageGrade)
         {
+            float studentScore = (score / 100) * 100;
             if (studentScore >= 80)
             {
                 return 'A';
