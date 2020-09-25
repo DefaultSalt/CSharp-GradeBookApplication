@@ -47,7 +47,7 @@
 
         }
 
-        public void CalculateStudentStatistics()
+        public override void CalculateStudentStatistics()
         {
             if (Students.Count > 5)
             {
@@ -56,6 +56,7 @@
             else
             {
                 base.CalculateStudentStatistics();
+
             }
         }
     }
