@@ -1,18 +1,16 @@
-﻿namespace GradeBook.GradeBooks
+﻿using System;
+using System.Linq;
+
+namespace GradeBook.GradeBooks
 {
-    using Enums;
-    using System.Linq;
-    using System;
     public class RankedGradeBook : BaseGradeBook
     {
-        public float score = 10;
-        
-        public RankedGradeBook(string name):base(name)
+        public RankedGradeBook(string name, bool isWeighted) : base(name, isWeighted)
         {
-            Type = GradeBookType.Ranked;
+            Type = Enums.GradeBookType.Ranked;
         }
 
-        public override char GetLetterGrade (double averageGrade)
+        public override char GetLetterGrade(double averageGrade)
         {
             if (Students.Count < 5)
             {
@@ -31,7 +29,6 @@
             if (averageGrade >= grades[(threshold * 4) - 1])
                 return 'D';
             return 'F';
-
         }
 
         public override void CalculateStatistics()
