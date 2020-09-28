@@ -26,6 +26,11 @@ namespace GradeBook.GradeBooks
             isWeighted = IsWeighted;
         }
 
+        protected BaseGradeBook(string name)
+        {
+            Name = name;
+        }
+
         public void AddStudent(Student student)
         {
             if (string.IsNullOrEmpty(student.Name))
